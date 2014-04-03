@@ -15,6 +15,8 @@ public class MainActivity extends Activity {
 		Log.d("", "Line 2 added");
 		
 		// added this line without taking pradeeps update
+		
+		// added a new file and this line changed
 	}
 
 	@Override
