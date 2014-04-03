@@ -13,6 +13,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		Log.d("", "");
 		Log.d("", "Line 2 added");
+		// Now all the changes are there in server
 
         //pradeep added
         //2nd time
