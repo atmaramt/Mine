@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto"
+      package="com.parcelgenie.amazon" android:versionName="3.2.0.4" android:versionCode="41">
+      <!-- It will support for all screens and any density  -->
+      <supports-screens android:largeScreens="true"
+                    android:normalScreens="true"
+                    android:smallScreens="false"
+                    android:anyDensity="true"/>
+    <!-- Application will support in Android OS v2.0 to v2.3 -->
+    <!-- android:maxSdkVersion="16" - Declaring this attribute is not recommended -->
+    <uses-sdk android:targetSdkVersion="16" android:minSdkVersion="8"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+   	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+   	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-feature android:name="android.hardware.telephony"	android:required="true" />
+    <!-- GCM Configuration -->
+    <!-- <permission android:name="com.parcelgenie.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+    <uses-permission android:name="com.parcelgenie.permission.C2D_MESSAGE" /> -->
+    <!-- App receives GCM messages. -->
+	<!-- <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> -->
+	<!-- GCM requires a Google account. -->
+	<!-- <uses-permission android:name="android.permission.GET_ACCOUNTS" /> -->
+	<!-- Keeps the processor from sleeping when a message is received. -->
+	<!-- <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
+	
+    <application android:name=".ParcelGenieApplication" android:theme="@style/AppTheme"
+       android:label="@string/app_name" android:icon="@drawable/appicon" android:debuggable="false">
+    	<!-- We do not want to create multiple instances of the UI Main and so we
+        are specifying launchMode="singleTask".
+        Also we want the state should be saved, even if the application goes to background
+        and comes forward and so we are specifying alwaysRetainTaskState="true"-->
+        <activity android:name="com.parcelgenie.amazon.uiscreen.ParcelGenieUiMain"
+                android:label="@string/app_name"
+                android:alwaysRetainTaskState="true"
+                android:finishOnTaskLaunch="true"
+                android:screenOrientation="portrait"
+                android:configChanges="orientation|keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.SplashActivity"
+                android:screenOrientation="portrait"
+                android:configChanges="orientation|keyboardHidden">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.SPLASH" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.About"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.ABOUT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+		<activity android:name="com.parcelgenie.amazon.uiscreen.ItemDetails"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.DETAILS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+         <activity android:name="com.parcelgenie.amazon.uiscreen.ItemDetailsHolder"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.DETAILS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.PostOnFacebook"
+        		android:screenOrientation="portrait" android:exported="true"
+        		android:configChanges="orientation|keyboardHidden">
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.FacebookFriends"
+        		android:screenOrientation="portrait" android:exported="true"
+        		android:configChanges="orientation|keyboardHidden">
+        </activity>
+        
+        <activity android:name="com.parcelgenie.amazon.uiscreen.SettingsPage"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.SETTINGSPAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.SupportedCountryList"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.COUNTRY_LIST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.SendGiftPage"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden"
+        		android:windowSoftInputMode="adjustPan|adjustResize"
+        		>
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.GIFT_PAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.GiftListScreen"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden"
+        		android:windowSoftInputMode="adjustPan|adjustResize">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.GIFT_PAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.HistoryTab"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.HISTORY_TAB" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.HistoryItems"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.HISTORY_ITEM" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.Vouchers"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.VOUCHERS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.GiftPaymentPage"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.GIFTPAYMENTPAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.CreditCardPayment"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.CREDIT_CARD_PAYMENT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.RepeatCreditCardPayment"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.REPEAT_CARD_PAYMENT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.RecipientsAddressDetails"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.RCPT_ADDRESS_DETAILS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.CountyProviderPage"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.COUNTY_PROVIDER_PAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.TermsOfUsePage"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.TERMS_OF_USE_PAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.GiftSuccessPage"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.GIFT_SUCCESS_PAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.Tutorial"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden">
+            <!-- <intent-filter>
+                <action android:name="android.intent.action.TUTORIAL_PAGE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter> -->
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.RestrictionPage"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden">
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.ShakeToSee" 
+            		android:screenOrientation="portrait"
+        			android:configChanges="orientation|keyboardHidden">
+        </activity>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.CompInviteFBFriends" 
+            		android:screenOrientation="portrait"
+        			android:configChanges="orientation|keyboardHidden">
+        </activity>
+        <!-- <activity android:name="com.parcelgenie.uiscreen.RewardListPage" 
+            		android:screenOrientation="portrait"
+        			android:configChanges="orientation|keyboardHidden">
+        </activity> -->
+        <activity android:name="com.paypal.android.MEP.PayPalActivity"
+			  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+			  android:screenOrientation="portrait"
+              android:configChanges="orientation|keyboardHidden">
+	  	</activity>
+	  	<!-- Shield System Splash Activity -->
+	  	<activity android:name="com.parcelgenie.amazon.uiscreen.AppStatusSplash"
+        		android:screenOrientation="portrait"
+        		android:configChanges="orientation|keyboardHidden">
+        </activity>
+        <activity android:name="com.facebook.LoginActivity"
+            	android:screenOrientation="portrait" android:exported="true"
+        		android:configChanges="orientation|keyboardHidden"/>
+        <activity android:name="com.parcelgenie.amazon.uiscreen.FacebookPickFriends"
+                android:label="Pick Friends" android:exported="true"
+                android:screenOrientation="portrait"
+   				android:configChanges="orientation|keyboardHidden">
+        </activity>
+        <!-- publishing conent provider -->
+		<!-- <provider
+			android:name=".database.DBProvider"
+			android:authorities="com.parcelgenie.database.TablesList"
+			android:exported="false">
+		</provider> -->
+		<provider
+			android:name="com.parcelgenie.amazon.database.DBProvider"
+			android:authorities="com.parcelgenie.amazon.database.TablesList"
+			android:exported="false">
+		</provider>
+		<receiver
+		    android:name="com.google.android.gcm.GCMBroadcastReceiver"
+		    android:permission="com.google.android.c2dm.permission.SEND" >
+		    <intent-filter>
+		        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+		        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+		        <category android:name="com.parcelgenie" />
+		    </intent-filter>
+		</receiver>
+		<service android:name=".GCMIntentService" />
+		<!-- Ad-x implementation Start -->
+		<receiver android:name="com.AdX.tag.AdXAppTracker" android:exported="true">
+		    <intent-filter>
+				<action android:name="com.android.vending.INSTALL_REFERRER" />
+			</intent-filter>
+		</receiver>
+		<meta-data android:name="APP_NAME" android:value="com.parcelgenie" />
+		<meta-data android:name="ADX_CLIENT_ID" android:value="ParcG47532PJ" />
+		<!-- Ad-x implementation End -->
+		<meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
+    </application>
+</manifest> 

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Common -->
+    <string name="app_name">Swipe Navigation Demo</string>
+    <string name="bottom">Bottom</string>
+    <string name="center">Center</string>
+    <string name="top">Top</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+
+</resources>
