@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Common -->
+    <string name="app_name">Hello</string>
+    <string name="center1">Center</string>
+    <string name="left1">Left</string>
+    <string name="right">Right fdf</string>
+
+</resources>
