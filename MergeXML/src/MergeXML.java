@@ -42,6 +42,7 @@ public class MergeXML {
 				};
 		if(args.length < 3){
 			System.out.println("dffhdjfh");
+			System.out.println(" added 2nd line by Atmaram");
 		}else{
 			loadXML(args[INDEX_SOURCE1]);
 			loadXML(args[INDEX_SOURCE2]);
