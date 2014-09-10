@@ -48,7 +48,7 @@ public class MergeXML {
 			loadXML(args[INDEX_SOURCE2]);
 			writeXML(args[INDEX_DESTINATION]);
 			System.out.println("else");
-			System.out.println("else by sangeeta");
+			System.out.println("added 3rd line by Atmaram");
 		}
 	}
 
@@ -121,8 +121,3 @@ public class MergeXML {
 				e.printStackTrace();
 			}
 
-			// normalize text representation
-			return allXMLNodes;
-		}
-		
-}
