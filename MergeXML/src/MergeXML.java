@@ -1,7 +1,6 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Collections;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
@@ -42,6 +41,7 @@ public class MergeXML {
 				};
 		if(args.length < 3){
 			System.out.println("dffhdjfh");
+			System.out.println("In main :: testing sangeeta");
 		}else{
 			loadXML(args[INDEX_SOURCE1]);
 			loadXML(args[INDEX_SOURCE2]);
