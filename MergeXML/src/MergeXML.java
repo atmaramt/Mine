@@ -48,6 +48,7 @@ public class MergeXML {
 			loadXML(args[INDEX_SOURCE2]);
 			writeXML(args[INDEX_DESTINATION]);
 			System.out.println("else");
+			System.out.println("else by sangeeta");
 		}
 	}
 
