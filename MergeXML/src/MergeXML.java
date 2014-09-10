@@ -40,7 +40,6 @@ public class MergeXML {
 				"destination.xml"// merged file
 				};
 		if(args.length < 3){
-			System.out.println("dffhdjfh");
 			System.out.println("In main :: testing sangeeta");
 		}else{
 			loadXML(args[INDEX_SOURCE1]);
