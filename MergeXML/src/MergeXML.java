@@ -41,12 +41,13 @@ public class MergeXML {
 				"destination.xml"// merged file
 				};
 		if(args.length < 3){
-			System.out.println("dffhdjfh");
+			System.out.println("In main :: testing sangeeta");
 			System.out.println(" added 2nd line by Atmaram");
 		}else{
 			loadXML(args[INDEX_SOURCE1]);
 			loadXML(args[INDEX_SOURCE2]);
 			writeXML(args[INDEX_DESTINATION]);
+			System.out.println("else");
 		}
 	}
 
